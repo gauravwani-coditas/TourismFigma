@@ -3,17 +3,16 @@ import 'package:figma1/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class Bookmarks extends StatefulWidget {
-  Bookmarks({super.key});
+  const Bookmarks({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _BookmarksState();
   }
 }
 
 class _BookmarksState extends State<Bookmarks> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   void onItemTapped(int index) {
     switch (index) {
@@ -77,7 +76,7 @@ class _BookmarksState extends State<Bookmarks> {
                       ),
                     ),
                     child:
-                        Image.asset('assets/images/VectorBookmarkProfile.png'),
+                        Image.asset('assets/images/VectorBackButton.png'),
                   ),
                 ),
                 const SizedBox(width: 240),
@@ -94,7 +93,7 @@ class _BookmarksState extends State<Bookmarks> {
                         width: 1.3,
                       ),
                     ),
-                    child: Image.asset('assets/images/icon_in_icon.png'),
+                    child: Image.asset('assets/images/GroupBookmarkButton.png'),
                   ),
                 ),
               ],
@@ -129,10 +128,7 @@ class _BookmarksState extends State<Bookmarks> {
                             'Unravel mysteries of '
                             'the Maldives',
                             style: TextStyle(
-                                fontSize: 30,
-                                height: 1.2,
-                                wordSpacing: 6.0,
-                                fontWeight: FontWeight.w700),
+                                fontFamily: "Gellix",fontSize: 32,fontWeight: FontWeight.w700),
                           ),
                           const SizedBox(height: 15),
                           Container(
@@ -149,7 +145,7 @@ class _BookmarksState extends State<Bookmarks> {
                             child: Row(
                               children: [
                                 Image.asset(
-                                  'assets/images/men.png',
+                                  'assets/images/VectorBookmarkProfile.png',
                                   width: 26,
                                   height: 26,
                                   fit: BoxFit.cover,
@@ -158,8 +154,10 @@ class _BookmarksState extends State<Bookmarks> {
                                 const Text(
                                   'Keanu Carpent  May 17',
                                   style: TextStyle(
+                                    fontFamily: "Gellix",
                                     fontSize: 13,
-                                    fontWeight: FontWeight.w200,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(147, 151, 160, 1),
                                   ),
                                 ),
                               ],
@@ -170,9 +168,9 @@ class _BookmarksState extends State<Bookmarks> {
                             textAlign: TextAlign.justify,
                             'Just say anything, George, say whatever\'s natural, the first thing that comes to your mind. Take that you mutated son-of-a-bitch. My pine, why you. You space bastard, you killed a pine. You do? Yeah, it\'s 8:00. Hey, McFly, I thought I told you never',
                             style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              height: 1.6,
+                             fontFamily: "Gellix",
+                             fontSize: 16,
+                             fontWeight: FontWeight.w500,
                               // wordSpacing: 1.4,
                             ),
                           ),
@@ -185,27 +183,28 @@ class _BookmarksState extends State<Bookmarks> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+        items:  <BottomNavigationBarItem>[
+          const BottomNavigationBarItem(
             icon: ImageIcon(AssetImage(
                 "assets/images/navBarIconImages/VectorHomeIcon.png")),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage(
+              const AssetImage(
                   "assets/images/navBarIconImages/GroupBookMarkIcon.png"),
+                  color: _selectedIndex == 1 ? Colors.blue : Colors.grey,
             ),
             label: 'Bookmarks',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage(
                   "assets/images/navBarIconImages/GroupNotificationIcon.png"),
             ),
             label: 'Notifications',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: ImageIcon(AssetImage(
                 "assets/images/navBarIconImages/GroupProfileIcon.png")),
             label: 'Profile',

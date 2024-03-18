@@ -1,10 +1,11 @@
+import "package:figma1/BookMarks.dart";
 import "package:figma1/home_screen.dart";
-import "package:figma1/popularListView.dart";
 import "package:figma1/popularPostsListView.dart";
 import "package:figma1/posts.dart";
 import "package:flutter/material.dart";
 
 class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -13,7 +14,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
   void onItemTapped(int index) {
     switch (index) {
       case 0:
@@ -23,10 +24,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
         );
         break;
       case 1:
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => ),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Bookmarks()),
+        );
         break;
       case 2:
         // Navigator.push(

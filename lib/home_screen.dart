@@ -8,7 +8,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 Color myColor = Color.fromARGB(255, 241, 240, 240);
 
 class HomeScreen extends StatefulWidget {
@@ -24,6 +23,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 //
   void onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+
     switch (index) {
       case 0:
         Navigator.push(
@@ -34,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 1:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Bookmarks() ),
+          MaterialPageRoute(builder: (context) => Bookmarks()),
         );
         break;
       case 2:
@@ -97,7 +100,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                 
                 ],
               ),
 
@@ -154,33 +156,34 @@ class _HomeScreenState extends State<HomeScreen> {
               getShortForYouListView(),
 
               //popular listview
-
             ],
           ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage(
-                "assets/images/navBarIconImages/VectorHomeIcon.png")),
+            icon: ImageIcon(
+              const AssetImage("assets/images/navBarIconImages/VectorHomeIcon.png"),
+              color: _selectedIndex == 0 ? Colors.blue : Colors.grey,
+            ),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage(
                   "assets/images/navBarIconImages/GroupBookMarkIcon.png"),
             ),
             label: 'Bookmarks',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage(
                   "assets/images/navBarIconImages/GroupNotificationIcon.png"),
             ),
             label: 'Notifications',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: ImageIcon(AssetImage(
                 "assets/images/navBarIconImages/GroupProfileIcon.png")),
             label: 'Profile',
