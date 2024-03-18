@@ -1,5 +1,6 @@
 import "package:figma1/home_screen.dart";
 import "package:figma1/popularListView.dart";
+import "package:figma1/popularPostsListView.dart";
 import "package:figma1/posts.dart";
 import "package:flutter/material.dart";
 
@@ -49,6 +50,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
+          
             padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 26),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -248,7 +250,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
 
                 //popular ListView
-                getPopularListView(),
+                PopularListView(),
 
 
               ],
