@@ -3,6 +3,25 @@ import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
 
 Widget getMyTouristPlaces() {
+
+  final List<Map<String, dynamic>> items = [
+    {
+      'imagePath': "assets/images/VectortouristImage1.png",
+      'title': "Feel the thrill on the only surf simulator in Maldives 2022",
+      'profileImagePath' : 'assets/images/Vectorauthor1.png',
+      'profileName': "'Sang Dong-Min'",
+      'postDate' : "Sep 9,2022"
+    },
+    {
+      'imagePath': "assets/images/vectorTouristPlace2.jpeg",
+      'title': "Feel the thrill on the only surf simulator in Maldives 2022",
+      'profileImagePath' : 'assets/images/Vectorauthor2.png',
+      'profileName': "'Sang Dong-Min'",
+      'postDate' : "Sep 9,2022"
+    },
+  ];
+
+
   return SingleChildScrollView(
     scrollDirection: Axis.horizontal,
     child: Row(children: [
