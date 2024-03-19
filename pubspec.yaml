@@ -81,6 +81,7 @@ flutter:
         - asset: assets/fonts/GellixThin.otf 
         - asset: assets/fonts/GellixThinItalic.otf
         
+        
 
   assets:
   
@@ -103,11 +104,15 @@ flutter:
     - assets/images/navBarIconImages/VectorHomeIcon.png
     - assets/images/VectorprofilePhoto2.png
     - assets/images/VectorEllyPopular1.png
-    - assets/images/VectorEllyPopular2.png
+    - assets/images/VectorEllyPopular2.jpeg
     - assets/images/Vectortemple1.png
-    - assets/images/Grouptemple2.jpeg
+    - assets/images/Vectortemple2.png
     - assets/images/GroupClock.png
     - assets/images/GroupCalender.png
+    - assets/images/RectangleMaldives.png
+    - assets/images/VectorBookmarkProfile.png
+    - assets/images/VectorBackButton.png
+    - assets/images/GroupBookmarkButton.png
 
 
 
